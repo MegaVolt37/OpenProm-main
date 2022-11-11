@@ -11,27 +11,283 @@
 </head>
 
 <body>
-  <header></header>
-  <section>
-    <h1>Привет</h1>
-
-<div class="one">
-  <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
+  <header class="header">
+    <nav class="header__navigation">
+      <div class="header__navigation-logo">
+        <img class="header__navigation-logo__img" src="./images/Logo.svg" alt="Логотип OpenProm">
+      </div>
+      <ul class="header__navigation-items">
+        <li class="header__navigation-item">
+          <a class="header__navigation-item-link" href="#">ХАКАТОН</a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-item-link" href="#">для кого</a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-item-link" href="#">КЕЙСЫ</a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-item-link" href="#">лекторий</a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-item-link" href="#">программа</a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-item-link" href="#">тайминг</a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-item-link" href="#">FAQ</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container header__container">
+      <div class="header__content">
+        <div class="header__content__info">
+          <div class="header__content-company">
+            <img class="" src="./images/LogoEconomy.svg" alt="Логотип экономика Москвы" width="170" height="60">
+            <img class="" src="./images/LogoDepartament.svg"
+              alt="Логотип департамента инвестиционной и промышленной политики Москвы" width="205" height="60">
+          </div>
+          <div class="header__content-logo">
+            <img src="./images/HeaderMainLogo.svg" alt="Логотип OpenProm" width="320" height="190">
+          </div>
+          <nav class="header__content-navigation">
+            <ul class="content-navigation__items">
+              <li class="content-navigation__item">
+                <a class="content-navigation__link" href="#">промышленный хакатон</a>
+              </li>
+              <li class="content-navigation__item">
+                <a class="content-navigation__link" href="#">лекторий</a>
+                <button class="content-navigation__button">смотреть трансляцию</button>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__content-destination">
+            <div class="destination-item">
+              <p>17—18</p><span>декабря</span>
+            </div>
+            <div class="destination-item">
+              <p>IRRI-Loft</p><span>Дербеневская наб., дом 7, стр. 31</span>
+            </div>
+          </div>
+        </div>
+        <div class="header__content-guest">
+          <div class="guest__wrapper">
+            <img class="guest__img" src="./images/PhotoLebedev.jpg" alt="Фотография Артемия Лебедева" width="300"
+              height="300">
+            <p class="guest__name">Артемий<br>Лебедев</p>
+          </div>
+          <div class="guest__wrapper">
+            <img class="guest__img" src="./images/PhotoVoicehovsckii.jpg" alt="Фотография Антона Войцеховского"
+              width="230" height="230">
+            <p class="guest__name">Антон<br>Войцеховский</p>
+          </div>
+          <div class="guest__wrapper">
+            <img class="guest__img" src="./images/PhotoMorkovsckii.jpg" alt="Фотография Ильи Морковского" width="230"
+              height="230">
+            <p class="guest__name">Илья<br>Морковский</p>
+          </div>
+          <div class="guest__wrapper">
+            <img class="guest__img" src="./images/PhotoKaryakin.jpg" alt="Фотография Сергея Карякина" width="300"
+              height="300">
+            <p class="guest__name">Сергей<br>Карякин</p>
+          </div>
+        </div>
       </div>
     </div>
-</div>
-    
+
+  </header>
+  <section class="section-green hakaton">
+    <div class="container">
+      <div class="hakaton__poster">
+        <div class="hakaton__poster-left">
+          <h1 class="hakaton__poster-left__title">ХАКАТОН</h1>
+          <div class="hakaton__poster-left__date">
+            <p>17—18</p>
+            <span>декабря</span>
+          </div>
+          <button class="hakaton__poster-left__button">подать заявку</button>
+        </div>
+        <div class="hakaton__poster-right">
+          <div class="hakaton__poster-right__info">
+            <div class="location">
+              <p>IRRI-Loft</p>
+              <span>Дербеневская наб., 7, стр. 31</span>
+            </div>
+            <ul class="participation">
+              <li>
+                <p>offline</p>
+              </li>
+              <li>
+                <p>Участие бесплатно</p>
+              </li>
+            </ul>
+          </div>
+          <p class="hakaton__poster-right__slogan">Думай! Соревнуйся! Создавай!</p>
+          <span class="hakaton__poster-right__rules">Правила хакатона</span>
+        </div>
+      </div>
+      <div class="hakaton__waiting">
+        <h3 class="hakaton__waiting-title">тебя ждут</h3>
+        <div class="hakaton__waiting-line"></div>
+        <div class="hakaton__waiting-items">
+          <div class="hakaton__waiting-item">
+            <p>12 КЕЙСОВ</p><span>от крупных предприятий Москвы</span>
+          </div>
+          <div class="hakaton__waiting-item">
+            <p>Топовые спикеры</p><span>лекции, мотивирующие выступления и общение</span>
+          </div>
+          <div class="hakaton__waiting-item">
+            <p>крутые подарки</p><span>возможность попасть на стажировки и выиграть гаджеты</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </section>
+  <section class="section-black team">
+    <div class="container">
+      <div class="team__count">
+        <h2 class="team__count-title">ДЛЯ КОГО?</h2>
+        <div class="">
+          <p>команда</p>
+          <span>от 3 до 5 человек</span>
+        </div>
+        <div class="">
+          <p>возраст</p>
+          <span>18+</span>
+        </div>
+      </div>
+      <div class="team__terms">
+        <p class="team__terms-title">К участию в Хакатоне мы приглашаем студентов средних и высших образовательных
+          учреждений, а также
+          профильных специалистов</p>
+        <ul class="team__terms-items">
+          <li class="team__terms-item">
+            <p class="">Инженеры</p>
+          </li>
+          <li class="team__terms-item">
+            <p class="">IT-специалисты</p>
+          </li>
+          <li class="team__terms-item">
+            <p class="">Конструкторы</p>
+          </li>
+          <li class="team__terms-item">
+            <p class="">Дизайнеры</p>
+          </li>
+          <li class="team__terms-item">
+            <p class="">Технологи</p>
+          </li>
+          <li class="team__terms-item">
+            <p class="">проектировщики</p>
+          </li>
+          <li class="team__terms-item">
+            <p class="">логисты</p>
+          </li>
+          <li class="team__terms-item">
+            <p class="">аналитики данных</p>
+          </li>
+        </ul>
+      </div>
+      <div class="team__help">
+        <h4 class="team__help-title">Нет команды? Мы поможем!</h4>
+        <button class="team__help-button">Найти команду</button>
+      </div>
+    </div>
+  </section>
+  <section class="section-green cases">
+    <div class="container">
+      <div class="cases__title-wrapper">
+        <h2 class="cases__title">КЕЙСЫ</h2>
+        <p class="cases__subtitle">Эксперты каждого предприятия будут взаимодействовать с участниками</p>
+      </div>
+      <div class="cases__items">
+        <div class="cases__item">
+          <img class="cases__item-img" src="/images/Наука.png" alt="Логотип компании">
+          <h5 class="cases__item-title">ПАО НПО «Наука»</h5>
+          <p class="cases__item-description">Повышение эффективности работы узла охлаждения воздуха СКВ летательного
+            аппарата</p>
+          <span class="cases__item-button">подробнее</span>
+        </div>
+        <div class="cases__item">
+          <img class="cases__item-img" src="/images/Мосинжпроект.svg" alt="Логотип компании">
+          <h5 class="cases__item-title">Мосинжпроект</h5>
+          <p class="cases__item-description">Искуственный интеллект в проектировании/поставках/строительстве (EPC)</p>
+          <span class="cases__item-button">подробнее</span>
+        </div>
+        <div class="cases__item">
+          <img class="cases__item-img" src="/images/Монарх.svg" alt="Логотип компании">
+          <h5 class="cases__item-title">Комбинат Инновационных технологий-МонАрх</h5>
+          <p class="cases__item-description">Разработка решения по укрытию модульного многоэтажного дома от атмосферных
+            осадков</p>
+          <span class="cases__item-button">подробнее</span>
+        </div>
+        <div class="cases__item">
+          <img class="cases__item-img" src="/images/Молния.png" alt="Логотип компании">
+          <h5 class="cases__item-title">ОАО НПО «Молния»</h5>
+          <p class="cases__item-description">Моделирование процесса очистки околоземного пространства от техногенного
+            мусора</p>
+          <span class="cases__item-button">подробнее</span>
+        </div>
+        <div class="cases__item">
+          <img class="cases__item-img" src="/images/РКС.png" alt="Логотип компании">
+          <h5 class="cases__item-title">«Российские космические системы»</h5>
+          <p class="cases__item-description">Разработка модели видеорегистрирующей системы измерения температуры для
+            космического аппарата</p>
+          <span class="cases__item-button">подробнее</span>
+        </div>
+        <div class="cases__item">
+          <img class="cases__item-img" src="/images/Москабельнет.png" alt="Логотип компании">
+          <h5 class="cases__item-title">АО «Москабельмет»</h5>
+          <p class="cases__item-description">Машинное обучение для повышения эффективности отдела продаж</p>
+          <span class="cases__item-button">подробнее</span>
+        </div>
+        <div class="cases__item">
+          <img class="cases__item-img" src="/images/ЩЛЗ.png" alt="Логотип компании">
+          <h5 class="cases__item-title">АО «ЩЛЗ»</h5>
+          <p class="cases__item-description">Разработка программного обеспечения для автоматизации формирования плана
+            производства</p>
+          <span class="cases__item-button">подробнее</span>
+        </div>
+        <div class="cases__item">
+          <img class="cases__item-img" src="/images/Газпром.png" alt="Логотип компании">
+          <h5 class="cases__item-title">Газпром-Нефть</h5>
+          <p class="cases__item-description">Перспективы технологического развития Московского нефтеперерабатывающего
+            завода</p>
+          <span class="cases__item-button">подробнее</span>
+        </div>
+        <div class="cases__item">
+          <img class="cases__item-img" src="/images/ММП.png" alt="Логотип компании">
+          <h5 class="cases__item-title">ММП Чернышева</h5>
+          <p class="cases__item-description">Создание чат-бота по обучению</p>
+          <span class="cases__item-button">подробнее</span>
+        </div>
+        <button class="cases__items-button">подать заявку</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section>
+    <h1>Привет</h1>
+
+    <div class="one">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+        </div>
+      </div>
+    </div>
+
+  </section> -->
   <footer></footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
