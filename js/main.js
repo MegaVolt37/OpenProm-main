@@ -111,7 +111,10 @@ btnOpenVideo.addEventListener('click', () => {
   const video = document.querySelector('.lecture__video');
   const videoFrame = document.querySelector('.lecture__video-frame');
   video.classList.remove('is-closed')
-  videoFrame.src = "https://vk.com/video_ext.php?oid=-25510790&id=456242845&hash=dd6cef3ef866fb2f&hd=2?autoplay=1";
+  setTimeout(() => {
+    videoFrame.src = "https://vk.com/video_ext.php?oid=-25510790&id=456242845&hash=dd6cef3ef866fb2f&hd=2?autoplay=1";
+  }, 2000);
+
 })
 btnCloseVideo.addEventListener('click', () => {
   const video = document.querySelector('.lecture__video');
