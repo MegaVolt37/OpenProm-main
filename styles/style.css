@@ -69,7 +69,7 @@ h1 {
 }
 
 .container {
-  max-width: 1230px;
+  max-width: 1245px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -654,23 +654,461 @@ section {
 
 .cases__items {
   display: flex;
-  gap: 20px ;
+  gap: 20px;
   flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
 }
 
 .cases__item {
-  flex: 1 0 290px;
+  flex: 0 1 23.7%;
+  border: 2px solid #000000;
+  padding: 20px 18px 20px 18px;
+  min-height: 430px;
+  display: grid;
+  grid-template-rows: 1fr;
 }
 
-.cases__item-img {}
+.cases__item:nth-child(1) .cases__item-img {
+  margin-top: 25px;
+  margin-bottom: 65px;
+}
 
-.cases__item-title {}
+.cases__item:nth-child(2) .cases__item-img {
+  margin-top: 35px;
+}
 
-.cases__item-description {}
+.cases__item:nth-child(3) .cases__item-img {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
 
-.cases__item-button {}
+.cases__item:nth-child(5) .cases__item-img {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
 
-.cases__items-button {}
+.cases__item:nth-child(6) .cases__item-img {
+  margin-top: 10px;
+}
+
+.cases__item:nth-child(7) .cases__item-img {
+  margin-top: 10px;
+  margin-bottom: 43px;
+}
+
+.cases__item:nth-child(9) .cases__item-img {
+  margin-top: 15px;
+}
+
+.cases__item-img {
+  margin: 0 auto;
+}
+
+.cases__item-title {
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.cases__item-description {
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #000000;
+  overflow-wrap: anywhere;
+  max-width: 250px;
+}
+
+.cases__item-button {
+  display: block;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'MoscowEconomy400';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: right;
+  text-decoration: underline;
+  color: #000000;
+  align-self: flex-end;
+}
+
+.cases__items-button {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #000000;
+  cursor: pointer;
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: transparent;
+  height: fit-content;
+  padding: 19px;
+  max-width: 420px;
+  width: 100%;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+
+.cases__items-button:hover {
+  background-color: #000;
+  color: #00FFA8;
+}
+
+.cases__item-info {
+  background: #000000;
+  opacity: 0.9;
+  border: 2px solid #00FFA8;
+  display: flex;
+  position: relative;
+  padding: 50px;
+  max-height: 535px;
+  height: 100%;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  right: 20px;
+}
+
+.cases__item-info.is-closed {
+  display: none;
+}
+
+.cases__item-info_company {
+  padding-right: 25px;
+  border-right: 2px solid #00FFA8;
+  margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 345px;
+}
+
+.cases__item-info_company-logo {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  max-height: 145px;
+  max-width: 110px;
+  max-height: 95px;
+  min-height: 95px;
+  object-fit: contain;
+}
+
+.cases__item-info_company-name {
+  font-family: 'TT Moscow Economy800';
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.cases__item-info_company-description {
+  font-family: 'MoscowEconomy400';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+  margin-bottom: 80px;
+}
+
+.cases__item-info_company-button {
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 31px;
+  text-transform: uppercase;
+  color: #00FFA8;
+  border: 2px solid #00FFA8;
+  background-color: transparent;
+  padding: 12px;
+  max-width: 345px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.cases__item-info_company-button:hover {}
+
+.cases__item-info_tasks-title {
+  font-family: 'TT Moscow Economy800';
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.cases__item-info_tasks-desription {
+  font-family: 'MoscowEconomy400';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+  white-space: pre-wrap;
+}
+
+.cases__item-info__close {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/* Конец section cases */
+/* lecture */
+.lecture {
+  background-image: url('../images/BackgroundLecture.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  position: relative;
+}
+
+.lecture__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lecture__title {
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 102px;
+  color: #00FFA8;
+  margin-bottom: 50px;
+}
+
+.lecture__left {
+  flex: 0 1 415px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lecture__left-location {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+.lecture__left-location__date {
+  display: flex;
+  flex-direction: column;
+}
+
+.lecture__left-location__date p {
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 51px;
+  color: #FFFFFF;
+}
+
+.lecture__left-location__date span {
+  font-family: 'MoscowEconomy400';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+.lecture__left-location__place {}
+
+.lecture__left-location__place p {
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 51px;
+  color: #FFFFFF;
+}
+
+.lecture__left-location__place span {
+  font-family: 'MoscowEconomy400';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+.lecture__left-term {
+  margin-bottom: auto;
+}
+
+.lecture__left-term__item {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.lecture__left-term__item::after {
+  content: "";
+  position: relative;
+  left: 0;
+  display: block;
+  height: 12px;
+  width: 12px;
+  background-color: #00FFA8;
+}
+
+.lecture__left-term__item p {
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 31px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.lecture__left-button {
+  cursor: pointer;
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 31px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #00FFA8;
+  background-color: transparent;
+  border: 2px solid #00FFA8;
+  max-width: 395px;
+  width: 100%;
+  padding: 12px;
+}
+
+.lecture__right {
+  max-width: 495px;
+}
+
+.lecture__right-title {
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.lecture__right-subtitle {
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 65px;
+}
+
+.lecture__right-show {
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 23px;
+  color: #00FFA8;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.lecture__video {
+  position: absolute;
+  border: 4px solid #00FFA8;
+  top: 34%;
+  left: 0;
+  right: 0;
+  max-width: 1215px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.lecture__video-wrapper {
+  position: relative;
+}
+
+.lecture__video.is-closed {
+  display: none;
+
+}
+
+.lecture__video-closed {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+/* Конец section lecture */
+/* section program */
+.program {
+  background-image: url('../images/BackgroundProgram.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.program__title {
+  font-family: 'MoscowEconomy900';
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 77px;
+  color: #000000;
+}
+
+.program__title-program {
+  margin-bottom: 75px;
+}
+
+.program__content {
+  display: grid;
+}
+
+.program__item {}
+
+.program__item-img {}
+
+.program__item-info {}
+
+.program__item-info__time {}
+
+.program__item-info__date {}
+
+.program__item-info__name {}
+
+.program__item-info__description {}
+
+.program__item-info__slogan {}
+
+.program__title-timing {}
+
+.timing {}
+
+.timing__left {}
+
+.timing__center {}
+
+.timing__right {}
+
+/* Конец section program */
+
 
 
 
