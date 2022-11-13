@@ -1201,25 +1201,25 @@ section {
 
 @font-face {
   font-family: "RalewayRegular";
-  src: url("./../fonts/TTChocolates-Black.ttf") format("truetype");
+  src: url("../fonts/TTChocolates-Black.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "MoscowEconomy400";
-  src: url("./../fonts/TTMoscowEconomyRegular.ttf") format("truetype");
+  src: url("../fonts/TTMoscowEconomyRegular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "MoscowEconomy700";
-  src: url("./../fonts/TTMoscowEconomyBold.ttf") format("truetype");
+  src: url("../fonts/TTMoscowEconomyBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "MoscowEconomy800";
-  src: url("./../fonts/TTMoscowEconomyExtraBold.ttf") format("truetype");
+  src: url("../fonts/TTMoscowEconomyExtraBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "MoscowEconomy900";
-  src: url("./../fonts/TTMoscowEconomyBlack.ttf") format("truetype");
+  src: url("../fonts/TTMoscowEconomyBlack.ttf") format("truetype");
 }
