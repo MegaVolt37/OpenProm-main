@@ -5,6 +5,8 @@ const btnClosehoverBlock = document.querySelector('.cases__item-info__close')
 const btnOpenVideo = document.querySelector('.lecture__right-show')
 const btnCloseVideo = document.querySelector('.lecture__video-closed')
 const anchors = document.querySelectorAll('a[href*="#"]')
+const btnAcordeon = document.querySelectorAll('.faq__accordeon-item-title__button')
+const accordeonContent = document.querySelectorAll('.faq__accordeon-item')
 // const swiper = new Swiper('.mySwiper', {
 //   // Optional parameters
 //   direction: 'horizontal',
@@ -26,11 +28,15 @@ const anchors = document.querySelectorAll('a[href*="#"]')
 //     el: '.swiper-scrollbar',
 //   },
 // });
+
+// Изменение цвета хедера
 window.addEventListener('scroll', () => {
   const posTop = document.querySelector('.section-green').getBoundingClientRect().top;
   const blocks = document.querySelectorAll('.section-green')
-  console.log(window.innerHeight, posTop,blocks)
+  console.log(window.innerHeight, posTop, blocks) // доделать изменение хедера при скролле
 })
+// ----------
+// Скролл по якорям
 for (let anchor of anchors) {
   anchor.addEventListener('click', (event) => {
     event.preventDefault();
@@ -41,6 +47,8 @@ for (let anchor of anchors) {
     })
   })
 }
+// --------
+
 btnClosehoverBlock.addEventListener('click', () => {
   hoverBlock.classList.add('is-closed')
 })
@@ -122,6 +130,7 @@ for (let i = 0; i < btnCase.length; i++) {
     hoverBlock.classList.remove('is-closed')
   };
 }
+// Открытие/Закрытие видео
 btnOpenVideo.addEventListener('click', () => {
   const video = document.querySelector('.lecture__video');
   const videoFrame = document.querySelector('.lecture__video-frame');
@@ -139,3 +148,21 @@ btnCloseVideo.addEventListener('click', () => {
   video.classList.add('is-closed')
   videoFrame.src = src
 })
+// -------
+// Открытие/закрытие аккордеона
+for (let i = 0; i < btnAcordeon.length; i++) {
+  btnAcordeon[i].onclick = function () {
+    btnAcordeon[i].classList.toggle('active')
+    accordeonContent[i].querySelector('.faq__accordeon-item-description').classList.toggle('closed')
+    // if (i <= 3) {
+    //   hoverBlock.style.top = '20px'
+    // } else if (i > 3 && i <= 7) {
+    //   hoverBlock.style.top = '35%'
+    // } else {
+    //   hoverBlock.style.top = '69%'
+    // }
+  };
+}
+// btnAcordeon.addEventListener('click', (event) => {
+//   console.log(event.target)
+// })

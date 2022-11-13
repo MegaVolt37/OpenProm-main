@@ -1080,35 +1080,422 @@ section {
 
 .program__content {
   display: grid;
+  row-gap: 50px;
 }
 
-.program__item {}
+.program__item {
+  display: flex;
+  border: 2px solid #000000;
+  column-gap: 70px;
+}
 
-.program__item-img {}
+.program__item:nth-child(2n) {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding-left: 50px;
+}
 
-.program__item-info {}
+.program__item-img {
+  flex: 0 1 auto;
+}
 
-.program__item-info__time {}
+.program__item-info {
+  max-width: 495px;
+  margin: 55px 0;
+  display: flex;
+  flex-direction: column;
+}
 
-.program__item-info__date {}
+.program__item-info__time {
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #000000;
+}
 
-.program__item-info__name {}
+.program__item-info__date {
+  font-size: 20px;
+  line-height: 26px;
+}
 
-.program__item-info__description {}
+.program__item-info__name {
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #000000;
+  padding-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 2px solid #000;
+}
 
-.program__item-info__slogan {}
+.program__item-info__description {
+  font-family: 'MoscowEconomy400';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  color: #000000;
+}
 
-.program__title-timing {}
+.program__item-info__slogan {
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #000000;
+  margin-top: auto;
+}
 
-.timing {}
+.program__button {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: transparent;
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 31px;
+  padding: 12px;
+  max-width: 395px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  margin-bottom: 120px;
+}
 
-.timing__left {}
+.program__button:hover {
+  background-color: #000;
+  color: #fff;
+}
 
-.timing__center {}
+.program__title-timing {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
 
-.timing__right {}
+.timing {
+  display: flex;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.timing__wrapper {
+  display: grid;
+  grid-template-columns: 33% 1fr;
+  gap: 20px;
+}
+
+.timing__date {
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 31px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+.timing__time {
+  font-family: 'MoscowEconomy700';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+  grid-column: 1;
+}
+
+.timing__desription {
+  font-family: 'MoscowEconomy400';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+  grid-column: 2;
+}
+
+.timing__left {
+  padding: 50px 0;
+  flex: 0 1 16%;
+}
+
+.timing__center {
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  padding: 50px 40px;
+  margin: 0 40px;
+  flex: 0 1 43%;
+}
+
+.timing__right {
+  padding: 50px 0;
+}
 
 /* Конец section program */
+/* section faq */
+.faq__wrapper {
+  display: flex;
+  gap: 20px;
+  padding-top: 120px;
+}
+
+.faq__title {
+  font-family: 'MoscowEconomy900';
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 70px;
+  color: #00FFA8;
+  flex: 0 1 48%;
+}
+
+.faq__accordeon {
+  width: 100%;
+}
+
+.faq__accordeon-item {
+  margin-bottom: 60px;
+}
+
+.faq__accordeon-item-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq__accordeon-item-title__text {
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 31px;
+  color: #00FFA8;
+}
+
+.faq__accordeon-item-title__button {
+  cursor: pointer;
+  border: 2px solid #00FFA8;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.faq__accordeon-item-title__button::after {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #00FFA8;
+  display: block;
+  margin: 0 auto;
+}
+
+.faq__accordeon-item-title__button::before {
+  display: none;
+  content: "";
+  height: 25px;
+  width: 2px;
+  background-color: #00FFA8;
+
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+.faq__accordeon-item-title__button.active::before {
+  display: block;
+}
+
+.faq__accordeon-item-description {
+  margin-top: 35px;
+  font-family: 'MoscowEconomy400';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  color: #FFFFFF;
+}
+
+.faq__accordeon-item-description.closed {
+  display: none;
+}
+
+.faq__accordeon-item-description a:first-child {
+  color: #FFFFFF;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+
+.faq__accordeon-item-description a:first-child:hover {
+  color: #00FFA8;
+}
+
+.faq__accordeon-item-description a:last-child {
+  color: #00FFA8;
+}
+
+.faq__feedback {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 120px;
+}
+
+.faq__feedback-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq__feedback-left a {
+  cursor: pointer;
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 31px;
+  color: #FFFFFF;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+
+.faq__feedback-left a:hover {
+  color: #00FFA8;
+}
+
+.faq__feedback-right {}
+
+.faq__feedback-right__social {
+  display: flex;
+  margin-bottom: 35px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.social__vk,
+.social__telegram,
+.social__ok {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  border: 2px solid #00FFA8;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+
+.social__vk svg path,
+.social__telegram svg path,
+.social__ok svg path {
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+
+.social__vk:hover,
+.social__telegram:hover,
+.social__ok:hover {
+  background-color: #00FFA8;
+
+}
+
+.social__vk:hover svg path,
+.social__telegram:hover svg path,
+.social__ok:hover svg path {
+  fill: #fff
+}
+
+.social__vk {}
+
+.social__telegram {
+  margin: 0 20px;
+}
+
+.social__ok {}
+
+.social__chat {
+  margin-left: 40px;
+  background-color: transparent;
+  font-family: 'MoscowEconomy800';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #00FFA8;
+  border: 2px solid #00FFA8;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  max-width: 200px;
+  width: 100%;
+  padding: 6px 0;
+}
+
+.social__chat:hover {
+  color: #fff;
+  background-color: #00FFA8;
+}
+
+.faq__feedback-right__rules {
+  display: flex;
+  gap: 30px;
+}
+
+.faq__feedback-right__rules span {
+  cursor: pointer;
+  font-family: 'MoscowEconomy400';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #00FFA8;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+
+.faq__feedback-right__rules span:hover {
+  color: #fff;
+}
+
+/* Конец section faq */
 
 
 
