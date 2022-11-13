@@ -114,7 +114,8 @@ btnOpenVideo.addEventListener('click', () => {
 btnCloseVideo.addEventListener('click', () => {
   const video = document.querySelector('.lecture__video');
   const videoFrame = document.querySelector('.lecture__video-frame');
-  videoFrame.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+  videoFrame.stopVideo()
+  console.log()
 
   video.classList.add('is-closed')
 })
