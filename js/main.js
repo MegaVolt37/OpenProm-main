@@ -4,7 +4,7 @@ const casesBlock = document.querySelector('.cases__items')
 const btnClosehoverBlock = document.querySelector('.cases__item-info__close')
 const btnOpenVideo = document.querySelector('.lecture__right-show')
 const btnCloseVideo = document.querySelector('.lecture__video-closed')
-
+const anchors = document.querySelectorAll('a[href*="#"]')
 // const swiper = new Swiper('.mySwiper', {
 //   // Optional parameters
 //   direction: 'horizontal',
@@ -26,6 +26,21 @@ const btnCloseVideo = document.querySelector('.lecture__video-closed')
 //     el: '.swiper-scrollbar',
 //   },
 // });
+window.addEventListener('scroll', () => {
+  const posTop = document.querySelector('.section-green').getBoundingClientRect().top;
+  const blocks = document.querySelectorAll('.section-green')
+  console.log(window.innerHeight, posTop,blocks)
+})
+for (let anchor of anchors) {
+  anchor.addEventListener('click', (event) => {
+    event.preventDefault();
+    const blockId = anchor.getAttribute('href')
+    document.querySelector('' + blockId).scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    })
+  })
+}
 btnClosehoverBlock.addEventListener('click', () => {
   hoverBlock.classList.add('is-closed')
 })
