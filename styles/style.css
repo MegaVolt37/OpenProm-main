@@ -292,7 +292,7 @@ section {
 /* Конец Header */
 /* Section Хакатон */
 .hakaton {
-  background-image: url('/images/BackgroundSection.png');
+  background-image: url('../images/BackgroundSection.png');
   background-repeat: no-repeat;
 }
 
