@@ -113,5 +113,10 @@ btnOpenVideo.addEventListener('click', () => {
 })
 btnCloseVideo.addEventListener('click', () => {
   const video = document.querySelector('.lecture__video');
+  const videoFrame = document.querySelector('.lecture__video-frame');
+  videoFrame.style.display = "none"
+  console.log(videoFrame)
+
   video.classList.add('is-closed')
+  videoFrame.style.display = "block"
 })
