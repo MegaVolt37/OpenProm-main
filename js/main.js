@@ -7,6 +7,7 @@ const btnCloseVideo = document.querySelector('.lecture__video-closed')
 const anchors = document.querySelectorAll('a[href*="#"]')
 const btnAcordeon = document.querySelectorAll('.faq__accordeon-item-title__button')
 const accordeonContent = document.querySelectorAll('.faq__accordeon-item')
+const headerNav = document.querySelector('.header__navigation')
 // const swiper = new Swiper('.mySwiper', {
 //   // Optional parameters
 //   direction: 'horizontal',
@@ -30,11 +31,26 @@ const accordeonContent = document.querySelectorAll('.faq__accordeon-item')
 // });
 
 // Изменение цвета хедера
-window.addEventListener('scroll', () => {
+function scrollHeader() { // Доработать
   const posTop = document.querySelector('.section-green').getBoundingClientRect().top;
-  const blocks = document.querySelectorAll('.section-green')
-  console.log(window.innerHeight, posTop, blocks) // доделать изменение хедера при скролле
-})
+  const blocks = document.querySelectorAll('section')
+  const footer = document.querySelector('footer')
+  for (let i = 0; i < blocks.length; i++) {
+    console.log(blocks[i])
+    if (blocks[i].offsetTop <= window.pageYOffset) {
+      if (blocks[i].classList[0] == "section-green") {
+        headerNav.style.background = "#000"
+      } else {
+        headerNav.style.background = "#fff"
+      }
+    } else if (blocks[0].offsetTop >= window.pageYOffset) {
+      headerNav.style.background = "transparent"
+    }
+  }
+
+}
+window.addEventListener('scroll', scrollHeader)
+window.onload = scrollHeader
 // ----------
 // Скролл по якорям
 for (let anchor of anchors) {
