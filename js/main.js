@@ -39,20 +39,25 @@ function scrollHeader() { // Доработать
   for (let i = 0; i < blocks.length; i++) {
     if (blocks[i].offsetTop - 90 <= window.pageYOffset && !(window.pageYOffset >= blocks[lastElement].offsetTop + blocks[lastElement].clientHeight)) {
       if (blocks[i].classList[0] == "section-green") {
-        headerNav.style.background = "#000"
-        console.log(1)
+        headerNav.style.background = "rgb(0 0 0 / 80%)"
+        const buttons = headerNav.querySelectorAll('.header__navigation-item-link')
+        for (let i = 0; i < buttons.length; i++) {
+          buttons[i].style.color = "#00FFA8"
+        }
       } else {
-        headerNav.style.background = "#fff"
+        headerNav.style.background = "rgb(0 255 168 / 80%)"
+        const buttons = headerNav.querySelectorAll('.header__navigation-item-link')
+        for (let i = 0; i < buttons.length; i++) {
+          buttons[i].style.color = "#fff"
+        }
       }
     } else if (window.pageYOffset < blocks[0].offsetTop - 90) {
-      headerNav.style.background = "transparent"
-      console.log(1)
+      headerNav.style.background = "rgb(0 0 0 / 80%)"
     }
     else if (window.pageYOffset >= blocks[lastElement].offsetTop + blocks[lastElement].clientHeight) {
-      headerNav.style.background = "transparent"
-      console.log(1)
+      headerNav.style.background = "rgb(0 0 0 / 80%)"
     }
-    console.log(window.pageYOffset, blocks[0].offsetTop - 90)
+    console.log(headerNav.querySelectorAll('.header__navigation-item-link'))
   }
 
 }

@@ -115,6 +115,8 @@ section {
   -moz-transition: all .3s ease-in-out;
   -ms-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
+  max-width: none;
+  background-color: rgb(0 0 0 / 80%);
 }
 
 .header__navigation-items {
