@@ -35,17 +35,24 @@ function scrollHeader() { // Доработать
   const posTop = document.querySelector('.section-green').getBoundingClientRect().top;
   const blocks = document.querySelectorAll('section')
   const footer = document.querySelector('footer')
+  const lastElement = blocks.length - 1
   for (let i = 0; i < blocks.length; i++) {
-    console.log(blocks[i])
-    if (blocks[i].offsetTop <= window.pageYOffset) {
+    if (blocks[i].offsetTop - 90 <= window.pageYOffset && !(window.pageYOffset >= blocks[lastElement].offsetTop + blocks[lastElement].clientHeight)) {
       if (blocks[i].classList[0] == "section-green") {
         headerNav.style.background = "#000"
+        console.log(1)
       } else {
         headerNav.style.background = "#fff"
       }
-    } else if (blocks[0].offsetTop >= window.pageYOffset) {
+    } else if (window.pageYOffset < blocks[0].offsetTop - 90) {
       headerNav.style.background = "transparent"
+      console.log(1)
     }
+    else if (window.pageYOffset >= blocks[lastElement].offsetTop + blocks[lastElement].clientHeight) {
+      headerNav.style.background = "transparent"
+      console.log(1)
+    }
+    console.log(window.pageYOffset, blocks[0].offsetTop - 90)
   }
 
 }
